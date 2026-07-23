@@ -1,0 +1,30 @@
+# regdgcnn-empty-cache.patch
+
+## 功能说明
+
+修复 PaddlePaddle 2.6 版本中 `regdgcnn.py` 的 GPU 缓存清理 API 兼容性问题。
+
+## 问题描述
+
+原始代码使用 `paddle.device.empty_cache()` 清理 GPU 缓存，但该 API 在 Paddle 2.6 中已变更，直接调用会报错。
+
+## 修改内容
+
+- **文件**: `ppsci/arch/regdgcnn.py`
+- **位置**: `knn_graph_` 函数末尾
+
+将：
+```python
+paddle.device.empty_cache()
+```
+
+替换为：
+```python
+# Paddle 2.6 exposes cache clearing under paddle.device.cuda.
+if paddle.is_compiled_with_cuda() and hasattr(paddle.device, "cuda"):
+    paddle.device.cuda.empty_cache()
+```
+
+## 适用版本
+
+- PaddlePaddle >= 2.6

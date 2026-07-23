@@ -1,0 +1,18 @@
+# Copyright (c) 2026 MetaX Integrated Circuits (Shanghai) Co., Ltd. All rights reserved.
+
+--- a/ppsci/arch/regdgcnn.py
++++ b/ppsci/arch/regdgcnn.py
+@@ -13,1 +13,2 @@
+ # limitations under the License.
++# Copyright (c) 2026 MetaX Integrated Circuits (Shanghai) Co., Ltd. All rights reserved.
+@@ -98,7 +99,9 @@
+         .contiguous()
+     )
+     del x, idx, idx_base
+-    paddle.device.empty_cache()
++    # Paddle 2.6 exposes cache clearing under paddle.device.cuda.
++    if paddle.is_compiled_with_cuda() and hasattr(paddle.device, "cuda"):
++        paddle.device.cuda.empty_cache()
+     return feature
+
+ 

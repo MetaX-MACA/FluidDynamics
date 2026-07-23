@@ -1,0 +1,22 @@
+# install_mesh.patch
+
+## 功能说明
+
+适配 PaddleScience `install_mesh.sh` 脚本，使其可在 MACA GPU 基础镜像中正常运行。
+
+## 修改内容
+
+- **文件**: `install_mesh.sh`
+
+### 1. 移除 GCC-9 安装，改用系统自带编译器
+删除 `apt-get install gcc-9 -y`，将 `CC`/`CXX` 从硬编码 `/usr/bin/gcc-9`/`g++-9` 改为 `${CC:-gcc}`/`${CXX:-g++}`。
+
+### 2. 更新日志文案
+将 `Installing GCC-9 Toolchain` 和 `GCC-9` 相关提示改为 `Using System GCC Toolchain` / `System GCC`。
+
+### 3. pysdf 安装增加 `--no-build-isolation`
+`python -m pip install pysdf` → `python -m pip install --no-build-isolation pysdf`，避免构建隔离导致找不到系统依赖。
+
+## 适用场景
+- 使用非 Ubuntu 原生 GCC 版本的基础镜像
+- MACA GPU 或其他自定义编译工具链环境
