@@ -12,10 +12,10 @@
 
 | 子目录 | 项目简介 | 主要领域 |
 | :--- | :--- | :--- |
-| **DeepCFD** | 基于卷积神经网络（CNN）的模型，可高效求解非均匀稳态层流问题。 | 流体力学模型、流场预测 |
-| **CFD-GCN** | 一种基于图神经网络的 CFD 计算模型。 | 流体力学模型、流场预测 |
-| **Aneurysm** | PaddleScience 中基于物理信息神经网络（PINN）的颅内动脉瘤血流建模案例|无监督训练|
-| **DrivAerNet** | 用于汽车气动设计的高保真三维汽车 CFD 数据集|数据驱动的监督学习任务|
+| **[DeepCFD](https://github.com/MetaX-MACA/FluidDynamics/tree/main/DeepCFD)** | 基于卷积神经网络（CNN）的模型，可高效求解非均匀稳态层流问题。 | 流体力学模型、流场预测 |
+| **[CFD-GCN](https://github.com/MetaX-MACA/FluidDynamics/tree/main/CFD-GCN)** | 一种基于图神经网络的 CFD 计算模型。 | 流体力学模型、流场预测 |
+| **[Aneurysm](https://github.com/MetaX-MACA/FluidDynamics/tree/main/Aneurysm)** | PaddleScience 中基于物理信息神经网络（PINN）的颅内动脉瘤血流建模案例|无监督训练|
+| **[DriverNet](https://github.com/MetaX-MACA/FluidDynamics/tree/main/DriverNet)** | 用于汽车气动设计的高保真三维汽车 CFD 数据集|数据驱动的监督学习任务|
 
 
 > 更多模型和应用正在持续适配与添加中，敬请关注。
