@@ -36,7 +36,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
-RUN git clone --depth 1 --branch "${PADDLESCIENCE_REF}" "${PADDLESCIENCE_REPO}" /workspace/PaddleScience
+RUN git clone --branch "${PADDLESCIENCE_REF}" "${PADDLESCIENCE_REPO}" /workspace/PaddleScience
 RUN cd /workspace/PaddleScience && git checkout 033132e061c50147c2841400f18717998077e28d
 
 COPY patch/regdgcnn-empty-cache.patch /tmp/regdgcnn-empty-cache.patch

@@ -55,7 +55,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /workspace
 
 RUN git config --global http.version HTTP/1.1 \
-    && git clone --depth 1 --branch "${PADDLESCIENCE_REF}" \
+    && git clone --branch "${PADDLESCIENCE_REF}" \
         "${PADDLESCIENCE_REPO}" /workspace/PaddleScience
 RUN cd /workspace/PaddleScience && git checkout 033132e061c50147c2841400f18717998077e28d
 
