@@ -13,7 +13,10 @@
 | 子目录 | 项目简介 | 主要领域 |
 | :--- | :--- | :--- |
 | **[DeepCFD](https://github.com/MetaX-MACA/FluidDynamics/tree/main/DeepCFD)** | 基于卷积神经网络（CNN）的模型，可高效求解非均匀稳态层流问题。 | 流体力学模型、流场预测 |
-| **[PaddleScience-ModelZoo](https://github.com/MetaX-MACA/FluidDynamics/tree/main/PaddleScience-ModelZoo)** | 汇总了开源项目 [PaddleScience](https://github.com/PaddlePaddle/PaddleScience)官方仓库中支持的流体相关模型/案例 | PaddleScience支持的物理、化学、气象等领域 |
+| **[CFD-GCN](https://github.com/MetaX-MACA/FluidDynamics/tree/main/CFD-GCN)** | 一种基于图神经网络的 CFD 计算模型。 | 流体力学模型、流场预测 |
+| **[Aneurysm](https://github.com/MetaX-MACA/FluidDynamics/tree/main/Aneurysm)** | PaddleScience 中基于物理信息神经网络（PINN）的颅内动脉瘤血流建模案例|无监督训练|
+| **[DrivAerNet](https://github.com/MetaX-MACA/FluidDynamics/tree/main/DrivAerNet)** | 用于汽车气动设计的高保真三维汽车 CFD 数据集|数据驱动的监督学习任务|
+
 
 > 更多模型和应用正在持续适配与添加中，敬请关注。
 
@@ -23,17 +26,17 @@
 
 以下是目前已适配沐曦GPU并可用于计算流体力学及相关领域研究的模型与应用概览：
 
-| 模型/应用名称 | 适用场景 | 可选用框架 |
+| 模型/应用名称 | 适用场景 | 
 | :--- | :--- | 
-| **DeepCFD** | 基于卷积神经网络（CNN）的模型，可高效求解非均匀稳态层流问题。  | PyTorch |
-|**[DrivAerNet](https://github.com/MetaX-MACA/FluidDynamics/tree/main/PaddleScience-ModelZoo/DrivAerNet)**|汽车表面阻力预测模型| PaddleScience |
-|**Domino**|汽车表面阻力预测模型| PhysicsNeMo  |
-|**AeroGraphnet**|汽车表面阻力预测模型| PhysicsNeMo |
-|**[Aneurysm](https://github.com/MetaX-MACA/FluidDynamics/tree/main/PaddleScience-ModelZoo/ANEURYSM)**|颅内动脉瘤压力建模| PaddleScience、PhysicsNeMo |
-|**[CFD-GCN](https://github.com/MetaX-MACA/FluidDynamics/tree/main/PaddleScience-ModelZoo/CFD-GCN)** |通用流场高分辨率模型| PaddleScience、PyTorch |
-|**FNO**|傅里叶神经算子模型| Pytorch、PhysicsNeMo、PaddleScience |
-|**KAN**|一种用可学习的样条函数替代固定激活函数的神经网络，在符号回归等任务中表现出高精度和可解释性| PyTorch、PhysiceNeMo |
-|**DeepOnet**|神经算子模型| PhysicsNeMo、PaddleScience、DeepXDE |
+| **DeepCFD** | 基于卷积神经网络（CNN）的模型，可高效求解非均匀稳态层流问题。  |
+|**DrivAerNet**|汽车表面阻力预测模型|
+|**Domino**|汽车表面阻力预测模型|
+|**AeroGraphnet**|汽车表面阻力预测模型|
+|**Aneurysm**|颅内动脉瘤压力建模|
+|**CFD-GCN**|通用流场高分辨率模型|
+|**FNO**|傅里叶神经算子模型|
+|**KAN**|一种用可学习的样条函数替代固定激活函数的神经网络，在符号回归等任务中表现出高精度和可解释性|
+|**DeepOnet**|神经算子模型|
 
 ---
 
