@@ -11,13 +11,13 @@ DrivAerNet 是用于汽车气动设计的高保真三维汽车 CFD 数据集。�
 - image构建：
 
 ```bash
-docker build -f Dockerfile -t paddlescience-drivernet .
+docker build -f Dockerfile -t paddlescience-drivaernet .
 ```
 
 - docker运行：
 
 ```bash
-docker run -it --name drivernet-maca \
+docker run -it --name drivaernet-maca \
   --device=/dev/mxcd \
   --device=/dev/dri \
   --group-add video \
@@ -25,7 +25,7 @@ docker run -it --name drivernet-maca \
   --security-opt seccomp=unconfined \
   --ulimit memlock=-1 \
   --ulimit stack=67108864 \
-    paddlescience-drivernet \
+    paddlescience-drivaernet \
   /bin/bash
 ```
 
