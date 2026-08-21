@@ -18,7 +18,7 @@
 | 沐曦（MetaX）适配说明 | https://github.com/MetaX-MACA/AI4S-Framework/tree/main/PhysicsNeMo           |
 | CFD 示例目录          | https://github.com/NVIDIA/physicsnemo/tree/v2.0.0/examples/cfd               |
 | PhysicsNeMo 官方文档  | https://docs.nvidia.com/deeplearning/physicsnemo/physicsnemo-core/index.html |
-| 上游许可证            | https://github.com/NVIDIA/physicsnemo/blob/v2.0.0/LICENSE                    |
+| 上游许可证            | https://github.com/NVIDIA/physicsnemo/blob/v2.0.0/LICENSE.txt                    |
 
 ---
 
